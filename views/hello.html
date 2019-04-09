@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+    .rouge {
+      color: red;
+    }
+    .jaune {
+      color: yellow;
+    }
+  </style> 
+</head>
+<body>
+
+<p>Hello {{ name }} !</p>
+  
+<p> Vous avez choisie:
+  {% if  couleur === 'rouge' %}
+  <ul class="rouge">
+      {% for i in rouge %}
+        <li>{{ i }} </li>
+      {% endfor %}
+  </ul>
+  {% else %}
+  <ul class="jaune">
+      {% for i in jaune %}
+        <li>{{ i }} </li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+</p>
+
+ 
+</body>
+</html>
