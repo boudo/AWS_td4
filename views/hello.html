@@ -21,7 +21,7 @@
         <li>{{ i }} </li>
       {% endfor %}
   </ul>
-  {% else %}
+  {% elif couleur === 'jaune' %}
   <ul class="jaune">
       {% for i in jaune %}
         <li>{{ i }} </li>
@@ -29,6 +29,17 @@
   </ul>
   {% endif %}
 </p>
+<!--<p>
+    <a href="/bye/{{ name }}"> bye</a>
+</p>-->
+  <form action="/bye" method = "POST">
+    <p>
+      <input type="hidden" name="name" value= "{{ name }}" >
+    </p>
+    <p>
+      <input type="submit" value="bye">
+    </p>
+</form>
 
  
 </body>
