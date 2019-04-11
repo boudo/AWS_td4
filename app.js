@@ -114,31 +114,6 @@ app.get('/cookie-monster', function(req, res)
 );
 
 // On crée une route pour l'url /cookie-monster
-app.get('/cookie-monster', function(req, res)
-                            {
-                              var count;
-                              var gagner = '';
-                              var resultat = '';
-                              if(req.cookies.count)
-                              {
-                                count = parseInt(req.cookies.count) + 1;
-                                res.cookie('count', count);
-                                if(count === 1000000)
-                                {
-                                  gagner += '<br><br> Félicitation Vous avez gagné une voiture !!!!';
-                                } 
-                              } 
-                              else
-                              {
-                                count = 1;
-                                res.cookie('count', count);
-                              }
-                              resultat += 'Vous avez visité ' + count + ' fois' + gagner;
-                              res.send(resultat);
-                            }
-);
-
-// On crée une route pour l'url /cookie-monster
 app.get('/', function(req, res)
               {
                 var count = 0;
